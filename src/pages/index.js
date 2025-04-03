@@ -1,13 +1,3 @@
-// const tableColumns = [
-//   { Header: "SKU Name", accessor: "sku" },
-//   { Header: "Sales", accessor: "sales" },
-//   { Header: "Out of Stock", accessor: "stock" },
-// ];
-
-// const tableData = [
-//     { sku: "Protein Bar 100g", sales: "₹33,132.12", stock: "1.68%" },
-//     { sku: "Choco Bar 100g", sales: "₹8,526.32", stock: "6.79%" },
-// ];
 import tableStruct from './tableStruct.json';
 import DashboardLayout from '../components/DashboardLayout';
 import SalesCard from '../components/salescard';
