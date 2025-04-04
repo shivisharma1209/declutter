@@ -42,8 +42,7 @@ export default function SalesCard({ title, value, percentage, data }) {
         axios.request(config)
             .then((response) => {
                 setfirst(shortenKeyNames(response.data?.results[0]?.data));
-                // console.log("response.data");
-                // console.log(JSON.stringify(response.data));
+
             })
             .catch((error) => {
                 console.log(error);

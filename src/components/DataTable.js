@@ -7,9 +7,10 @@ export function capitalizeFirstLetter(string) {
       return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
     }
 
-export default function DataTable({ data }) {
+export default function DataTable({data, title}) {
     const [sampleData, setfirst] = useState([]);
     const [columns, setcolumn] = useState([]);
+    const [tableTitle, settitle] = useState(title);
     useEffect(() => {
         let config = {
             method: 'post',
@@ -30,21 +31,19 @@ export default function DataTable({ data }) {
                 const val = shortenKeyNames(response.data?.results[0]?.data);
                 setfirst(val);
                 setcolumn(Object.keys(val[0]));
-
-                // console.log("response.data");
-                console.log(JSON.stringify(response.data));
             })
             .catch((error) => {
                 console.log(error);
             });
     }, [data]);
-    console.log("columns");
-    console.log(columns);
-    console.log("sampleData");
-    console.log(sampleData);
     return (
         <div className="rounded-md border border-[#F1F1F1] shadow-[0px_1px_0px_0px_rgba(0,0,0,0.12)]">
-            {/* msndjs */}
+            <div className="font-bold p-2 text-lg">
+                {tableTitle}
+                <button className="rounded-xl text-black bg-white flex  float-right p-1">
+                        <div className="bg-green-600 hover:bg-green-800 rounded-md text-white p-1">Filters</div>
+                    </button>
+            </div>
             <table className="w-full border-collapse">
                 <thead className="bg-gray-100">
                     <tr>
