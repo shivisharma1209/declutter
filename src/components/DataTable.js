@@ -41,7 +41,7 @@ export default function DataTable({data, title}) {
             <div className="font-bold p-2 text-lg">
                 {tableTitle}
                 <button className="rounded-xl text-black bg-white flex float-right p-1">
-                        <div className="bg-green-600 hover:bg-green-800 rounded-md text-white p-1">Filters</div>
+                        <div className="bg-green-600 hover:bg-green-800 rounded-md text-white px-2 py-1">Filters</div>
                     </button>
             </div>
             <table className="w-full border-collapse">
