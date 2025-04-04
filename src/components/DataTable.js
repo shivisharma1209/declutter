@@ -40,7 +40,7 @@ export default function DataTable({data, title}) {
         <div className="rounded-md border border-[#F1F1F1] shadow-[0px_1px_0px_0px_rgba(0,0,0,0.12)]">
             <div className="font-bold p-2 text-lg">
                 {tableTitle}
-                <button className="rounded-xl text-black bg-white flex  float-right p-1">
+                <button className="rounded-xl text-black bg-white flex float-right p-1">
                         <div className="bg-green-600 hover:bg-green-800 rounded-md text-white p-1">Filters</div>
                     </button>
             </div>
@@ -48,7 +48,7 @@ export default function DataTable({data, title}) {
                 <thead className="bg-gray-100">
                     <tr>
                         {columns.map((col, index) => (
-                            <th key={index} className="p-3 text-left text-gray-700 border-b whitespace-nowrap">
+                            <th key={index} className="p-3 text-left border border-gray-100 text-gray-700 whitespace-nowrap">
                                 {capitalizeFirstLetter(col)}
                             </th>
                         ))}
@@ -58,7 +58,7 @@ export default function DataTable({data, title}) {
                 {/* Table Body */}
                 <tbody>
                     {sampleData.slice(0,4).map((row, rowIndex) => (
-                        <tr key={rowIndex} className="border-b hover:bg-gray-50">
+                        <tr key={rowIndex} className="border border-gray-100 hover:bg-gray-50">
                                 {columns.map((col, index) => (
                                     <td key={index} className="p-3 text-gray-600">
                                         {row[col]}
